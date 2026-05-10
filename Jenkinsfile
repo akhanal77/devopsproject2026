@@ -35,7 +35,7 @@
        // }
         stage('Build Image') {
             steps {
-                sh "docker image build . -t akhanal77/api"
+                sh "docker buildx build . -t akhanal77/api"
             }
         }
         stage('Publish Image') {
