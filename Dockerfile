@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 COPY target/*.jar /app/app.jar
 EXPOSE 7070
