@@ -35,7 +35,7 @@
        // }
         stage('Build Image') {
             steps {
-                sh "docker buildx bake . -t akhanal77/app"
+                sh "docker buildx bake . akhanal77/app"
             }
         }
         stage('Publish Image') {
