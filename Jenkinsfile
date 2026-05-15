@@ -40,7 +40,7 @@
         }
         stage('Publish Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'Dockerhub', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PASS', usernameVariable: 'DOCKER_USER')]) {
                   sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}"
                   sh "docker image push akhanal77/api"
                 }
